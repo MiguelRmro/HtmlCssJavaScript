@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>JAVASCRIPT</title>
+  </head>
+  <body>
+    <form>
+      <br>
+      <label for="nombre">Nombre</label>
+       <input class="grande" 
+            type="text"
+            name="nombre"
+            onfocus="eventoFocusNombre();"
+            onblur="eventoSinFocoNombre();"
+            id="nombre"
+            placeholder="Digita aqui">
+       <br>
+      
+      <label>Que deportes te gustan:</label><br>
+      
+      <input class="indentar" 
+             id="deporte1" 
+             type="checkbox"
+             onMouseDown="eventoBasketClickPresionado();"
+             onMouseUp="eventoBasketClickLiberado();"
+             value=1>
+             <p id="itemBasket" class="alinear">Basketball</p><br>
+      
+      <input class="indentar" 
+             id="deporte2"
+             type="checkbox" 
+             onMouseEnter="eventoFootballEntre();"
+             onMouseLeave="eventoFootballSali();"
+             value=1>
+             <p id="itemFootball" class="alinear">Football</p><br>
+      
+      <input class="indentar" 
+             id="deporte3" 
+             type="checkbox" 
+             onclick="eventoTenisClick();"
+             value=1>
+             <p id="itemTenis" class="alinear">Tenis</p>
+
+       <br><br>
+      
+       <input class="bonito"
+           type="button" 
+           value="Mostrar que digito" 
+           onclick="presentarData();">
+
+      <input class="bonito"
+           type="reset" value="Limpiar campo"
+           onclick="presentarData(); restaurarEstilos();">
+      
+       <h3>El campo contiene : </h3>
+    
+       <p id="resultado"></p>
+    </form>
+  </body>
+</html>

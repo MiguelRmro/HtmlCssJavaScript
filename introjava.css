@@ -1,0 +1,28 @@
+.grande
+{
+  color: blue;
+  font-family: arial black;
+  font-size: 18px;
+}
+
+.bonito
+{
+  font-family: verdana;
+  background-color: yellow;
+  font-size: 20px;
+  color: blue;
+  width: 230px;
+}
+
+.indentar
+{
+  margin-left: 55px;
+}
+
+.alinear
+{
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+

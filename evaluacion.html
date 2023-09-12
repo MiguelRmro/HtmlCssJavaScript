@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title></title>
+   </head>
+   <body>
+     <form>
+       <fieldset class="ancho-estandar">
+         <legend>DATOS PERSONALES</legend>
+        
+         <label for="campoNombre">Nombre</label><p class="requerido">*</p><br>
+         <input class="caja-general" type="text" id="campoNombre" 
+           size="30" maxlength="25" placeholder="Indica tu nombre(s)" required><br>
+        
+         <label for="campoApellidos">Apellidos</label><br>
+         <input class="caja-general" type="text" id="campoApellidos"
+           size="30" maxlength="25" placeholder="Indica tus apellidos"><br>
+        
+         <label for="campoDireccion">Dirección</label><br>
+         <input class="caja-general" type="text" id="campoDireccion"             
+           size="50" maxlength="40" placeholder="Dirección de tu oficina"><br>
+
+         <label for="campoTelefono">Celular</label><br>
+         <input class="caja-general" type="text" id="campoTelefono"        
+           size="16" maxlength="18"
+           placeholder="Numero de celular"><br>
+
+         <label for="campoEmail">E-Mail</label>
+         <p class="requerido">*</p><br>
+         <input class="caja-general" type="email" id="campoEmail"             
+           size="50" maxlength="40" placeholder="Tu direccion de correo electrónico" required><br>
+        
+         <label>Tienes una pagina web &#63;</label>
+         <p class="texto-mejorado">
+         <input class="indentar-check" type="radio" id="tienesweb" name="tienesweb" value="S" onclick="habilitaWeb();">Si</p>
+         <p class="texto-mejorado">
+         <input class="indentar-check" type="radio" id="tienesweb" name="tienesweb" value="N" onclick="inhabilitaWeb();" checked>No</p><br>
+
+         <input class="caja-general" type="url" id="campoUrl" value="" size="50" maxlength="40" placeholder="coloca la url de tu pagina web aqui" disabled><br>
+        
+       </fieldset>
+     
+       <br>
+     
+       <fieldset class="ancho-estandar">
+         <legend>Información Adicional</legend>
+       
+         <div class="izquierda">
+           <label>Cual es tu Edad</label><br>
+           <input class="indentar-check" type="radio" id="rangoedad" name="rangoedad" value="1"><p class="texto-mejorado">0 a 20 años</p><br>
+           <input class="indentar-check" type="radio" id="rangoedad" name="rangoedad" value="2" checked><p class="texto-mejorado">20 a 30 años</p><br>
+           <input class="indentar-check" type="radio" id="rangoedad" name="rangoedad" value="3"><p class="texto-mejorado">30 a 50 años</p><br>
+           <input class="indentar-check" type="radio" id="rangoedad" name="rangoedad" value="4"><p class="texto-mejorado">+50 años<p><br>
+           <p class="titulo-fecha">Fecha de Nacimiento</p>
+           <input class="caja-general" type="date" id="fecnacimiento" name="fecnacimiento"> 
+         </div>
+       
+         <div class="derecha">
+           <label>Foto de Perfil</label>
+           <img class="foto-perfil" src="http://www.yoquiero.com.co/cursohtml/taller4/foto-alejandrox.jpg">
+           <label>Selecciona otra foto</label>
+           <input type="file" id="campofoto" name="campofoto" accept="image/*" id="archivo" onchange="seleccionado()">
+           <label name="filelabel" id="fileLabel"></label>
+           <br><br>
+           <label>Genero</label><br>
+           <p class="texto-mejorado"><input class="indentar-check" type="radio" id="genero" name="genero" value="M" checked>Hombre</p>
+           <p class="texto-mejorado"><input class="indentar-check" type="radio" id="genero" name="genero" value="F">Mujer</p><br>
+
+         </div>
+       </fieldset>
+
+       <br>
+     
+       <fieldset class="ancho-estandar">
+         <legend>&nbsp; Validar/Enviar Formulario &nbsp;</legend>
+         <input class="advertencia ancho-boton" type="button" value="Validar Datos" onclick="validar()">
+         <input class="boton-enviar ancho-boton" type="submit" value="Enviar Datos" onclick="enviar()">
+         <input class="limpiar-datos ancho-boton" type="reset" value="Limpia campos" onclick="limpiar_validar()">
+       </fieldset>
+       
+       <br>
+       
+       <fieldset class="ancho-estandar">
+         <legend>&nbsp Información en el formulario &nbsp</legend>
+         <p id="resumen">Aqui aparecera la información que se digite en el formulario cuando seleccione el botón "Validar Datos" o el botón "Enviar Datos"</p>
+         <div id="divisionResultado" class="mostrar-ocultar" id="mostrar-campos">
+           <h4>Contenido en Datos Personales</h4> 
+           <p id="var_camponombre">Nombre :</p>
+           <p id="var_campoapellidos">Apellidos :</p>
+           <p id="var_campodireccion">Direccion :</p>
+           <p id="var_campotelefono">Telefono :</p>
+           <p id="var_campoemail">Email :</p>
+           <p id="var_campotieneweb">Tienes Web :</p>
+           <p id="var_campourl">Url :</p>
+           <h4>Contenido en Informacion Adicional</h4> 
+           <p id="var_camporangoedad">Rango Edad :</p>
+           <p id="var_camponacimiento">Fecha Nacimiento :</p>
+           <p id="var_campogenero">Genero :</p>
+         </div>
+       </fieldset>
+
+     </form>
+   </body>
+</html>
+
+
+
+
